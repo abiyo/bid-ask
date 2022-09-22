@@ -34,10 +34,14 @@ Pass: secretpass
 ```sh
 http://localhost:5601/
 ```
+Выберите Explore On My Own.
 В выпадающем меню в разделе Kibana выберите Discover.
 В поле Index Pattern введите bidask. Далее Next Step и Create Index Pattern.
-Снова в разделе Kibana выберите Discover.
+Выйдите из раздела и снова в разделе Kibana выберите Discover.
 Вы увидите записи, которые попадают в Elasticsearch согласно условию, определенному в python-приложении.
+
+В завершении удалите контейнеры и сгенерированные данные запустив команду в корне проекта:
+```docker compose down --volumes```
 
 
 -------------------------------------------------- ------------------------------------
@@ -76,7 +80,11 @@ Open Kibana
 ```sh
 http://localhost:5601/
 ```
+Choose "Explore on my own".
 From the dropdown menu under "Kibana", select "Discover".
 In the "Index Pattern" field, enter "bidask". Next "Next Step" and "Create Index Pattern".
-Again, in the "Kibana" section, select "Discover".
+Exit from the section and again, in the "Kibana" section, select "Discover".
 You will see the records that fall into Elasticsearch according to the condition defined in the python application.
+
+After all delete containers and generated data:
+```docker compose down --volumes```
